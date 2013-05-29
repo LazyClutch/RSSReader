@@ -81,6 +81,13 @@ h1.header-line,
 	margin-right:0 !important;
 }
 
+/*feed*/
+#feed{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 30px;
+}
+
 /* SIDEBAR ------------------------------------------------------------*/
 
 #sidebar{
