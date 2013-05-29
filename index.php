@@ -133,11 +133,11 @@
             <div id="main">
 
                 <div id="feed">
-                    <?php
-                    // Create lastRSS object 
-                    $address = 'http://sse.tongji.edu.cn/SSEMainRSS.aspx';
-                    ListAll($address);
-                    ?> 
+<!--                    //<?php
+//                    // Create lastRSS object 
+//                    $address = 'http://sse.tongji.edu.cn/SSEMainRSS.aspx';
+//                    ListAll($address);
+//                    ?> -->
                 </div>
                 <!-- Slider -->
                 <div id="slider">
