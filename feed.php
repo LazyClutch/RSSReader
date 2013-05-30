@@ -49,5 +49,6 @@ if ($rs = $rss->Get($address)) {
     $result = $result . "Error: It's not possible to reach RSS file...\n";
 }
 $result = encodeDetect($result);
-echo $result;
+$result = html_entity_decode($result, ENT_QUOTES, "UTF-8");
+echo "$result";
 ?>
