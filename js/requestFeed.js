@@ -19,7 +19,6 @@ function feedClicked(name) {
     link += name;
     link += "&sid=";
     link += Math.random();
-    alert(link);
     xmlHttp.onreadystatechange = stateChanged;
     xmlHttp.open("GET", link, true);
     xmlHttp.send(null);
