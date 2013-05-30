@@ -90,6 +90,7 @@
         <![endif]-->
         <!-- ENDS CSS -->	
         <script type="text/javascript" src="js/requestFeed.js"></script>
+        <script type="text/javascript" src="addFeed.js"></script>
 
 
     </head>
@@ -104,12 +105,12 @@
                 <a href="index.html"><img src="img/logo.png" alt="Left template" id="logo" /></a>
 
                 <!-- search -->
-                <form  method="get" id="searchform" action="#">
-                    <div>
-                        <input type="text" value="Search..." name="s" id="s" onfocus="defaultInput(this)" onblur="clearInput(this)" />
-                        <input type="submit" id="searchsubmit" value=" " />
-                    </div>
-                </form>
+                <div>
+                    <input type="text" value="Add feed..." name="s" id="s" onfocus="defaultInput(this)" onblur="clearInput(this)" />
+                    <img id="searchsubmit" onclick="addFeed()" value=" " /><br />
+                    <span id="feedTip"></span>
+                </div>
+
                 <!-- ENDS search -->
 
                 <!-- Navigation -->
@@ -133,11 +134,12 @@
             <div id="main">
 
                 <div id="feed">
-<!--                    //<?php
+                    <!--                    //<?php
 //                    // Create lastRSS object 
 //                    $address = 'http://sse.tongji.edu.cn/SSEMainRSS.aspx';
 //                    ListAll($address);
-//                    ?> -->
+//                    
+                    ?> -->
                 </div>
                 <!-- Slider -->
                 <div id="slider">

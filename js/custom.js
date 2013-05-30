@@ -188,10 +188,10 @@ $(document).ready(function() {
 	
 // search clearance	
 function defaultInput(target){
-	if((target).value == 'Search...'){(target).value=''}
+	if((target).value == 'Add feed...'){(target).value=''}
 }
 
 function clearInput(target){
-	if((target).value == ''){(target).value='Search...'}
+	if((target).value == ''){(target).value='Add feed...'}
 }
 
