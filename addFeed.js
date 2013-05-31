@@ -6,9 +6,13 @@
 var xmlHttp;
 
 function addFeed() {
-    var name = document.getElementById("s").value;
-    if (name.length == 0) {
+    var addr = document.getElementById("feedAddr").value;
+    var name = document.getElementById("feedName").value;
+    if (addr.length == 0) {
         document.getElementById("feedTip").innerHTML = "Invalid Feed";
+        return;
+    } else if(name.length == 0){
+        alert("请输入一个名字");
         return;
     }
     xmlHttp = GetXmlHttpObject();
@@ -16,9 +20,11 @@ function addFeed() {
         alert("Your browser doesn't support AJAX!");
         return;
     }
-    name = EncodeUtf8(name);
+    addr = EncodeUtf8(addr);
     var link = "addFeed.php";
     link += "?link=";
+    link += addr;
+    link += "&name=";
     link += name;
     link += "&sid=";
     link += Math.random();

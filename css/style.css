@@ -114,10 +114,11 @@ h1.header-line,
 }
 
 #sidebar #s{
+        position:relative;
+        margin-bottom:60px;
+        margin-left: 30px;
 	width: 175px;
 	height: 26px;
-	padding: 0px 10px;
-	margin: 0px;
 	border: 0;
 	background: url(../img/search-bg.png) no-repeat transparent 0px 0px;
 

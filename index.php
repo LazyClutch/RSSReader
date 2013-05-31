@@ -106,8 +106,12 @@
 
                 <!-- search -->
                 <div>
-                    <input type="text" value="Add feed..." name="s" id="s" onfocus="defaultInput(this)" onblur="clearInput(this)" />
-                    <img id="searchsubmit" onclick="addFeed()" value=" " /><br />
+                    <div id="s">
+                        <input type="text" value="Name..." id="feedName" name="s" />
+                        <input type="text" value="Add feed..." id="feedAddr" name="s" onfocus="defaultInput(this)" onblur="clearInput(this)" />
+                        <img id="searchsubmit" onclick="addFeed()" value=" " /><br />
+
+                    </div>
                     <span id="feedTip"></span>
                 </div>
 
