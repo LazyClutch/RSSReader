@@ -14,8 +14,13 @@ if (!$mysql_con) {
 }
 mysql_select_db("RSSReader", $mysql_con);
 $requestFeed = requestFeed($addr);
-$check = checkStr("http", $requestFeed);
-if ($check == TRUE) {
+$checkLegal = checkStr("http", $requestFeed);
+$checkRepeat = checkRepeat($addr);
+if($checkRepeat == TRUE){
+    echo "已有此订阅";
+    return;
+}
+if ($checkLegal == TRUE) {
     $insertQuery = "INSERT INTO FeedList (Name, Link) VALUES ('" . $title ."', '". $addr ."')";
     mysql_query($insertQuery);
     echo "订阅成功";
@@ -31,5 +36,14 @@ function checkStr($str, $target) {
     else
         return false;
 }
+
+function checkRepeat($addr){
+    $feedlist = mysql_query("select * from FeedList");
+    while ($row = mysql_fetch_array($feedlist)) {
+        if($addr == $row['Link'])return true;
+    }
+    return false;
+}
+
 mysql_close();
 ?>

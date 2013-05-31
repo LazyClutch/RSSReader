@@ -60,7 +60,11 @@ function addChanged() {
     if (xmlHttp.readyState == 4 || xmlHttp.readyState == "complete")
     {
         document.getElementById("feedTip").innerHTML = xmlHttp.responseText;
-        window.location.reload(window.location.href);
+        var val = document.getElementById("feedTip").innerHTML;
+        alert(val);
+        if(val == "订阅成功"){
+            window.location.reload(window.location.href);
+        }
     }
 }
 
