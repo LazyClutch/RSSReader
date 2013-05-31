@@ -110,9 +110,9 @@
                         <input type="text" value="Name..." id="feedName" name="s" />
                         <input type="text" value="Add feed..." id="feedAddr" name="s" onfocus="defaultInput(this)" onblur="clearInput(this)" />
                         <img id="searchsubmit" onclick="addFeed()" value=" " /><br />
-
+                        <span id="feedTip"></span>
                     </div>
-                    <span id="feedTip"></span>
+
                 </div>
 
                 <!-- ENDS search -->

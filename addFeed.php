@@ -1,6 +1,6 @@
 <?php
 
-include 'feed.php';
+include 'requestFeed.php';
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -8,7 +8,6 @@ include 'feed.php';
 $addr = $_GET["link"];
 $title = $_GET["name"];
 $addr = iconv("UTF-8", "ASCII", $addr);
-echo $addr;
 $mysql_con = mysql_connect("127.0.0.1:3306", "root", "aaawninhgyg");
 if (!$mysql_con) {
     die('Could not connect: ' . mysql_error());
@@ -19,9 +18,9 @@ $check = checkStr("http", $requestFeed);
 if ($check == TRUE) {
     $insertQuery = "INSERT INTO FeedList (Name, Link) VALUES ('" . $title ."', '". $addr ."')";
     mysql_query($insertQuery);
-    echo "";
+    echo "订阅成功";
 } else {
-    echo "";
+    echo "不合法的RSS源";
 }
 
 function checkStr($str, $target) {
@@ -32,5 +31,5 @@ function checkStr($str, $target) {
     else
         return false;
 }
-
+mysql_close();
 ?>

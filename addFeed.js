@@ -28,8 +28,7 @@ function addFeed() {
     link += name;
     link += "&sid=";
     link += Math.random();
-    alert(link);
-    xmlHttp.onreadystatechange = stateChanged;
+    xmlHttp.onreadystatechange = addChanged;
     xmlHttp.open("GET", link, true);
     xmlHttp.send(null);
 }
@@ -57,10 +56,11 @@ function EncodeUtf8(s1)
 }
 
 
-function stateChanged() {
+function addChanged() {
     if (xmlHttp.readyState == 4 || xmlHttp.readyState == "complete")
     {
-        document.getElementById("feed").innerHTML = xmlHttp.responseText;
+        document.getElementById("feedTip").innerHTML = xmlHttp.responseText;
+        window.location.reload(window.location.href);
     }
 }
 
