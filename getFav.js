@@ -2,32 +2,26 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
+
 var xmlHttp;
 
-function feedClicked(name) {
-    if (name.length == 0) {
-        document.getElementById("feed").innerHTML = "";
-        return;
-    }
+function getFav(){
     xmlHttp = GetXmlHttpObject();
     if (xmlHttp == null) {
         alert("Your browser doesn't support AJAX!");
         return;
     }
-    var link = "feed.php";
-    link += "?name=";
-    link += name;
-    link += "&sid=";
-    link += Math.random();
-    xmlHttp.onreadystatechange = requestChanged;
+    var link = "getFav.php";
+    xmlHttp.onreadystatechange = getChanged;
     xmlHttp.open("GET", link, true);
     xmlHttp.send(null);
 }
 
-function requestChanged() {
+function getChanged() {
     if (xmlHttp.readyState == 4 || xmlHttp.readyState == "complete")
     {
-        document.getElementById("feed").innerHTML = xmlHttp.responseText;
+            alert("click");
+        //document.getElementById("feed").innerHTML = xmlHttp.responseText;
     }
 }
 
@@ -52,3 +46,4 @@ function GetXmlHttpObject() {
     }
     return xmlHttp;
 }
+

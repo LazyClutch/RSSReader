@@ -39,7 +39,8 @@ function requestFeed($address) {
     } else {
         $result = $result . "Error: It's not possible to reach RSS file...\n";
     }
-    $result = encodeDetect($result);
+    $term = "UTF-8";
+    $result = encodeDetect($result,$term);
     $result = html_entity_decode($result, ENT_QUOTES, "UTF-8");
     return $result;
 }

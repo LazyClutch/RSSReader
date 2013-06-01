@@ -25,10 +25,10 @@ function saveItem(node) {
         alert("Your browser doesn't support AJAX!");
         return;
     }
-    innerHTML = escape(innerHTML);
-    innerHTML = escape(innerHTML);
-    href = escape(href);
-    title = escape(title);
+    innerHTML = encodeURIComponent(innerHTML);
+    innerHTML = encodeURIComponent(innerHTML);
+    href = encodeURIComponent(href);
+    title = encodeURIComponent(title);
     var url = "saveItem.php";
     var link = "";
     link += "href=";
@@ -39,7 +39,7 @@ function saveItem(node) {
     link += title;
     link += "&sid=";
     link += Math.random();
-    xmlHttp.onreadystatechange = addChanged;
+    xmlHttp.onreadystatechange = saveChanged;
     xmlHttp.open("POST", url, true);
     xmlHttp.setRequestHeader("Content-Type","application/x-www-form-urlencoded"); 
     xmlHttp.send(link);
@@ -67,7 +67,7 @@ function EncodeUtf8(s1)
       return retV;
 }
 
-function addChanged() {
+function saveChanged() {
     if (xmlHttp.readyState == 4 || xmlHttp.readyState == "complete")
     {
         tipNode.innerHTML = xmlHttp.responseText;

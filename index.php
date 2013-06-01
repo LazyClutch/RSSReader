@@ -91,7 +91,8 @@
         <!-- ENDS CSS -->	
         <script type="text/javascript" src="js/requestFeed.js"></script>
         <script type="text/javascript" src="addFeed.js"></script>
-
+        <script type="text/javascript" src="saveItem.js"></script>
+        <script type="text/javascript" src="getFav.js"></script>
 
     </head>
     <body>
@@ -126,7 +127,7 @@
 
                 <!-- categories -->
                 <ul class="cat-list">
-                    <h4>catagory</h4>
+                    <h4 onclick="getFav()">Favorite</h4>
                 </ul>
                 <!-- categories -->	
 
@@ -278,7 +279,6 @@
         </div>
         <!-- ENDS FOOTER -->
 
-        <script type="text/javascript" src="saveItem.js"></script>
 
     </body>
 </html>

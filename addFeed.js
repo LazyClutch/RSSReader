@@ -28,7 +28,6 @@ function addFeed() {
     link += name;
     link += "&sid=";
     link += Math.random();
-    alert(link);
     xmlHttp.onreadystatechange = addChanged;
     xmlHttp.open("GET", link, true);
     xmlHttp.send(null);
