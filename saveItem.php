@@ -4,9 +4,9 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-$href = $_GET["href"];
-$title = $_GET["title"];
-$description = $_GET["description"];
+$href = $_POST["href"];
+$title = $_POST["title"];
+$description = $_POST["description"];
 $href = iconv("UTF-8", "ASCII", $href);
 $mysql_con = mysql_connect("127.0.0.1:3306", "root", "aaawninhgyg");
 if (!$mysql_con) {

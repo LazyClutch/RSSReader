@@ -3,10 +3,9 @@
  * and open the template in the editor.
  */
 var xmlHttp;
-var selfNode;
+var tipNode;
 
 function saveItem(node) {
-    selfNode = node;
     var ns=node.parentNode.childNodes;
     var innerHTML = "";
     var href,description,title;
@@ -17,6 +16,8 @@ function saveItem(node) {
         } else if(ns[i].nodeName === 'A'){
             href = ns[i].href;
             title = ns[i].innerHTML;
+        } else if(ns[i].nodeName === 'SPAN'){
+            tipNode = ns[i];
         }
     }
     xmlHttp = GetXmlHttpObject();
@@ -28,8 +29,9 @@ function saveItem(node) {
     innerHTML = escape(innerHTML);
     href = escape(href);
     title = escape(title);
-    var link = "saveItem.php";
-    link += "?href=";
+    var url = "saveItem.php";
+    var link = "";
+    link += "href=";
     link += href;
     link += "&description=";
     link += innerHTML;
@@ -38,8 +40,9 @@ function saveItem(node) {
     link += "&sid=";
     link += Math.random();
     xmlHttp.onreadystatechange = addChanged;
-    xmlHttp.open("GET", link, true);
-    xmlHttp.send(null);
+    xmlHttp.open("POST", url, true);
+    xmlHttp.setRequestHeader("Content-Type","application/x-www-form-urlencoded"); 
+    xmlHttp.send(link);
 }
 
 function EncodeUtf8(s1)
@@ -67,12 +70,7 @@ function EncodeUtf8(s1)
 function addChanged() {
     if (xmlHttp.readyState == 4 || xmlHttp.readyState == "complete")
     {
-        document.getElementById("feedTip").innerHTML = xmlHttp.responseText;
-        var val = document.getElementById("feedTip").innerHTML;
-        alert(val);
-        if(val == "订阅成功"){
-            window.location.reload(window.location.href);
-        }
+        tipNode.innerHTML = xmlHttp.responseText;
     }
 }
 
