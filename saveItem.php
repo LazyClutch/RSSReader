@@ -13,6 +13,9 @@ if (!$mysql_con) {
     die('Could not connect: ' . mysql_error());
 }
 mysql_select_db("RSSReader", $mysql_con);
+if(strstr($description, "�")){
+    echo "hello";
+}
 //$description = removeChar($description);
 $checkDup = checkDup($href);
 if ($checkDup == true) {

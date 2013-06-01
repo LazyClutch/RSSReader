@@ -25,6 +25,7 @@ function saveItem(node) {
         return;
     }
     innerHTML = escape(innerHTML);
+    innerHTML = escape(innerHTML);
     href = escape(href);
     title = escape(title);
     var link = "saveItem.php";
