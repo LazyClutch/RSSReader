@@ -20,8 +20,7 @@ function getFav(){
 function getChanged() {
     if (xmlHttp.readyState == 4 || xmlHttp.readyState == "complete")
     {
-            alert("click");
-        //document.getElementById("feed").innerHTML = xmlHttp.responseText;
+        document.getElementById("feed").innerHTML = xmlHttp.responseText;
     }
 }
 

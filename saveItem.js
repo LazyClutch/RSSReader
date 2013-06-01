@@ -26,7 +26,6 @@ function saveItem(node) {
         return;
     }
     innerHTML = encodeURIComponent(innerHTML);
-    innerHTML = encodeURIComponent(innerHTML);
     href = encodeURIComponent(href);
     title = encodeURIComponent(title);
     var url = "saveItem.php";
