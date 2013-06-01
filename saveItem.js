@@ -24,9 +24,9 @@ function saveItem(node) {
         alert("Your browser doesn't support AJAX!");
         return;
     }
-        alert(innerHTML);
     innerHTML = escape(innerHTML);
-    alert(innerHTML);
+    href = escape(href);
+    title = escape(title);
     var link = "saveItem.php";
     link += "?href=";
     link += href;
@@ -37,8 +37,8 @@ function saveItem(node) {
     link += "&sid=";
     link += Math.random();
     xmlHttp.onreadystatechange = addChanged;
-    //xmlHttp.open("POST", link, true);
-    //xmlHttp.send(null);
+    xmlHttp.open("GET", link, true);
+    xmlHttp.send(null);
 }
 
 function EncodeUtf8(s1)
