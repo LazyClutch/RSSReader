@@ -32,7 +32,7 @@ function requestFeed($address) {
         // Show last published articles (title, link, description) 
         $result = $result . "<ul>\n";
         foreach ($rs['items'] as $item) {
-            $result = $result . "\t<li id=\"item\"><a id=\"itemLink\" href=\"$item[link]\">" . $item['title'] . "</a><img src=\"img/save.png\" align=\"middle\" width=\"20\" height=\"20\" id=\"savePic\" onclick=\"saveItem(this)\"  /><span id=\"saveTip\"></span><br /><div id=\"description\">" . $item['description'] . "</div></li>\n";
+            $result = $result . "\t<li id=\"item\"><a id=\"itemLink\" href=\"$item[link]\">" . $item['title'] . "</a><img src=\"img/save.png\" align=\"middle\" width=\"20\" height=\"20\" id=\"savePic\" onclick=\"saveItem(this)\"  /><span id=\"saveTip\"></span><br /><div id=\"description\">" . $item['description'] . "a</div></li>\n";
             $result = $result . "<hr />\n";
         }
         $result = $result . "</ul>\n";
