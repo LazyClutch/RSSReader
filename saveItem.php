@@ -10,15 +10,16 @@ $title = $_POST["title"];
 $description = $_POST["description"];
 $title = urlencode($title);
 $href = iconv("UTF-8", "ASCII", $href);
+
+$href = str_replace("'", "\"", $href);
+$title = str_replace("'", "\"", $title);
+$description = str_replace("'", "\"", $description);
+
 $mysql_con = mysql_connect("127.0.0.1:3306", "root", "aaawninhgyg");
 if (!$mysql_con) {
     die('Could not connect: ' . mysql_error());
 }
 mysql_select_db("RSSReader", $mysql_con);
-mysql_query("set names 'utf-8'");
-if(strstr($description, "�")){
-    echo "hello";
-}
 //$description = removeChar($description);
 $checkDup = checkDup($href);
 if ($checkDup == true) {
