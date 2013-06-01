@@ -95,7 +95,6 @@
 
     </head>
     <body>
-
         <!-- WRAPPER -->
         <div id="wrapper">
 
@@ -279,6 +278,7 @@
         </div>
         <!-- ENDS FOOTER -->
 
+        <script type="text/javascript" src="saveItem.js"></script>
 
     </body>
 </html>
