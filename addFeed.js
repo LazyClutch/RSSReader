@@ -6,7 +6,7 @@
 var xmlHttp;
 
 function addFeed() {
-    var addr = document.getElementById("feedAddr").value;
+    var addr = document.getElementById("s").value;
     var name = document.getElementById("feedName").value;
     if (addr.length == 0) {
         document.getElementById("feedTip").innerHTML = "Invalid Feed";
@@ -20,7 +20,7 @@ function addFeed() {
         alert("Your browser doesn't support AJAX!");
         return;
     }
-    //addr = encodeURIComponent(addr);
+    addr = EncodeUtf8(addr);
     var link = "addFeed.php";
     link += "?link=";
     link += addr;

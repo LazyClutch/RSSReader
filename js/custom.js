@@ -188,10 +188,19 @@ $(document).ready(function() {
 	
 // search clearance	
 function defaultInput(target){
-	if((target).value == 'Add feed...'){(target).value=''}
+	if((target).value == 'Address...'){(target).value=''}
 }
 
 function clearInput(target){
-	if((target).value == ''){(target).value='Add feed...'}
+	if((target).value == ''){(target).value='Address...'}
+}
+
+function defaultNameInput(target){
+    	if((target).value == 'Name...'){(target).value=''}
+
+}
+
+function clearNameInput(target){
+    	if((target).value == ''){(target).value='Name...'}
 }
 

@@ -77,6 +77,12 @@ h6{ font-size: 26px; }
 }
 
 #sidebar #searchform #s{ color: #a5a3a0;}
+
+#sidebar #searchform #feedName{ color: #a5a3a0;}
+
+#sidebar #searchform #feedTip{ color: #a5a3a0;}
+
+
 	
 #sidebar #nav>li{ font-size: 14px; }
 	
@@ -87,6 +93,12 @@ h6{ font-size: 26px; }
 #sidebar #nav>li>ul li{ font-size: 12px; }
 
 #sidebar #searchform #s{ font-size: 12px; }
+
+#sidebar #searchform #feedName{ font-size: 12px; }
+
+#sidebar #searchform #feedTip{ font-size: 20px; }
+
+
 
 /* GALLERY------------------------------------------------------------*/
 
