@@ -33,7 +33,7 @@
             <!-- SIDEBAR -->
             <div id="sidebar">
                 <!-- logo -->
-                <a href="index.html"><img src="img/RSS_001.png" width="210" height="210" alt="Left template" id="logo" /></a>
+                <a href="index.php"><img src="img/RSS_001.png" onmouseover="mouseOver()" onmouseout="mouseOut()" width="210" height="210" alt="Left template" id="logo" /></a>
 
                 <!-- search -->
                 <div>
