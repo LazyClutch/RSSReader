@@ -20,7 +20,7 @@ function addFeed() {
         alert("Your browser doesn't support AJAX!");
         return;
     }
-    addr = EncodeUtf8(addr);
+    //addr = encodeURIComponent(addr);
     var link = "addFeed.php";
     link += "?link=";
     link += addr;
@@ -61,7 +61,6 @@ function addChanged() {
     {
         document.getElementById("feedTip").innerHTML = xmlHttp.responseText;
         var val = document.getElementById("feedTip").innerHTML;
-        alert(val);
         if(val == "订阅成功"){
             window.location.reload(window.location.href);
         }
