@@ -2,19 +2,6 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-//
-//$(document).ready(function() {
-//    $("#navItem").click(function() {
-//        $(this).siblings().removeClass("current-menu-item");
-//        $(this).addClass("current-menu-item");
-//        alert(this);
-//        //feedClicked(this.innerHTML);
-//    }
-//    )
-//}
-//)
-
-
 
 var xmlHttp;
 function feedClicked(name, selNode) {

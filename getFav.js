@@ -5,7 +5,14 @@
 
 var xmlHttp;
 
-function getFav(){
+function getFav(node) {
+    var list = document.getElementById("nav").childNodes;
+    for (var i = 0; i < list.length; i++) {
+        if (list[i].nodeName === 'LI') {
+            list[i].className = "menu-item";
+        }
+    }
+
     xmlHttp = GetXmlHttpObject();
     if (xmlHttp == null) {
         alert("Your browser doesn't support AJAX!");

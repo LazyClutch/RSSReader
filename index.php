@@ -63,8 +63,8 @@
                 <!-- Navigation -->	
 
                 <!-- categories -->
-                <ul class="cat-list">
-                    <h4 onclick="getFav()">Favorite</h4>
+                <ul class="favorite">
+                    <img id="favImg" src="img/fav.png" onclick="getFav(this)" onmouseover="favMouseOver()" onmouseout="favMouseOut()" />
                 </ul>
                 <!-- categories -->	
 
@@ -74,7 +74,6 @@
             <!-- MAIN -->
             <div id="main">
                 <div id="feed">
-
                 </div>
             </div>
             <!-- ENDS MAIN -->

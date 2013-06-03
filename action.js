@@ -46,3 +46,13 @@ function mouseOut() {
 }
 
 
+function favMouseOver(){
+    var favImg = document.getElementById("favImg");
+    favImg.src = "img/favhover.png";
+}
+
+function favMouseOut(){
+    var favImg = document.getElementById("favImg");
+    favImg.src = "img/fav.png";
+}
+

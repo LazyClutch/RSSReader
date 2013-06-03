@@ -193,6 +193,23 @@ h6.header-line{
     clear: both;
 }
 
+#sidebar .favorite{
+    display: block;
+    overflow: hidden;
+    padding-top: 25px;
+    margin-bottom: 20px;
+    
+    list-style-type: none;
+    margin-left: 15px;
+    margin-right: 36px;
+    clear: both;
+}
+
+#sidebar .favorite #favImg{
+    position:relative;
+    margin-left: 57px;
+}
+
 #sidebar .cat-list a{
     display: block;
     width: 95px;
