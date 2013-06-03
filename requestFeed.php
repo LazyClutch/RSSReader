@@ -22,7 +22,7 @@ function requestFeed($address) {
 // Try to load and parse RSS file 
     if ($rs = $rss->Get($address)) {
         foreach ($rs['items'] as $item) {
-            $result = $result . "\t<li id=\"item\"><a id=\"itemLink\" href=\"$item[link]\">" . $item['title'] . "</a><span id=\"saveTip\"></span><img src=\"img/save.png\" align=\"middle\" width=\"20\" height=\"20\" id=\"savePic\" onclick=\"saveItem(this)\"  /><br /><ul id=\"itemTime\">".$item['pubDate']."</ul><br /><div id=\"description\">" . $item['description'] . "</div></li><br />\n";
+    $result = $result . "\t<li id=\"item\"><a id=\"itemLink\" href=\"$item[link]\">" . $item['title'] . "</a><img src=\"img/save.png\" align=\"middle\" width=\"20\" height=\"20\" id=\"savePic\" onclick=\"saveItem(this)\"  /><span id=\"saveTip\"></span><br /><a id=\"itemTime\">".$item['pubDate']."</a><br /><div id=\"description\">" . $item['description'] . "</div></li><br />\n";
             $result = $result . "<hr />\n";
         }
         $result = $result . "</ul>\n";
