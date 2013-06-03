@@ -9,7 +9,7 @@ function GetFeedList() {
     $feedlist = mysql_query("select * from FeedList");
     $count = 0;
     while ($row = mysql_fetch_array($feedlist)) {
-        echo "<li id=\"navItem\" onclick=\"feedClicked('".$row['Name']."', "."this" .")\">".$row['Name']."</li><span id=\"navChoose\"></span>\n";
+        echo "<li id=\"navLi\" onclick=\"feedClicked('".$row['Name']."', "."this" .")\""."><a id=\"navItem\">".$row['Name']."</a></li></li>\n";
         $count++;
     }
     $count = 0;

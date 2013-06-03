@@ -162,30 +162,10 @@ h6.header-line{
 #sidebar #nav>li{
     display: block;
     height: 40px;
+    margin-left: 10px;
     background: url(../img/nav-item.png) no-repeat transparent;
     border-top: 1px solid #636363;
     border-bottom: 1px solid #373737;
-}
-
-#sidebar #nav>li:first-child{ border-top: none; }
-
-#sidebar #nav>li:last-child{ border-bottom: none; }	
-
-#sidebar #nav>li ul{
-    padding-left: 20px;
-    padding-right: 10px;
-}
-
-#sidebar #nav>li>ul li{
-    display: block;
-    background: none;
-
-    border-bottom: 1px solid #000000;
-    border-top: 1px solid #2e2d2d;
-}
-
-#sidebar #nav>li>ul li:last-child{
-    border-bottom: none;
 }
 
 #sidebar #nav>li:hover,
@@ -195,8 +175,8 @@ h6.header-line{
 
 #sidebar #nav>li a{
     display: block;
-    padding-left: 25px;
-    padding-top: 12px;
+    padding-left: 45px;
+    padding-top: 8px;
 }
 
 /* SIDEBAR - CATEGORIES ---------------------------------------------------*/
