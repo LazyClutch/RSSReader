@@ -21,16 +21,6 @@ function requestFeed($address) {
 
 // Try to load and parse RSS file 
     if ($rs = $rss->Get($address)) {
-        // Show website logo (if presented) 
-        if ($rs[image_url] != '') {
-            $result = $result . "<a href=\"$rs[image_link]\"><img src=\"$rs[image_url]\" alt=\"$rs[image_title]\" vspace=\"1\" border=\"0\" /></a><br />\n";
-        }
-        // Show clickable website title 
-        $result = $result . "<big><b><a href=\"$rs[link]\">$rs[title]</a></b></big><br />\n";
-        // Show website description 
-        $result = $result . "$rs[description]<br />\n";
-        // Show last published articles (title, link, description) 
-        $result = $result . "<ul>\n";
         foreach ($rs['items'] as $item) {
             $result = $result . "\t<li id=\"item\"><a id=\"itemLink\" href=\"$item[link]\">" . $item['title'] . "</a><img src=\"img/save.png\" align=\"middle\" width=\"20\" height=\"20\" id=\"savePic\" onclick=\"saveItem(this)\"  /><span id=\"saveTip\"></span><br /><div id=\"description\">" . $item['description'] . "a</div></li>\n";
             $result = $result . "<hr />\n";

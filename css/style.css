@@ -219,40 +219,12 @@ h6.header-line{
     float: left;
 }
 
-/* SIDEBAR - SOCIAL --------------------------------------------------------*/
-
-.social{
-    display: block;
-    overflow: hidden;
-    margin-left: 15px;
-    margin-right: 36px;
-    padding-top: 25px;
-    margin-bottom: 20px;
-}
-
-#page-content .social{ background: none; }
-
-
-.social a{
-    display: block;
-    width: 32px;
-    height: 32px;
-    float: left;
-    text-indent: -9000px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-}
-
-#sidebar .social a{
-    margin-right: 5px;
-    margin-bottom: 5px;
-}
-
-
 /* MAIN ------------------------------------------------------------*/
 
 #main{
-    width: 680px;
+    margin-left: 296px;
+    margin-top: -653px;
+    width: 655px;
     float: left;
 }
 
