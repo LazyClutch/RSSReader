@@ -7,9 +7,12 @@ function GetFeedList() {
     }
     mysql_select_db("RSSReader", $mysql_con);
     $feedlist = mysql_query("select * from FeedList");
+    $count = 0;
     while ($row = mysql_fetch_array($feedlist)) {
-        echo "<li onclick=\"feedClicked('".$row['Name']."')\">".$row['Name']."</li>\n";
+        echo "<li id=\"navItem\" onclick=\"feedClicked('".$row['Name']."', "."this" .")\">".$row['Name']."</li><span id=\"navChoose\"></span>\n";
+        $count++;
     }
+    $count = 0;
     mysql_close();
 }
 

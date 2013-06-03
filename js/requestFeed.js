@@ -2,9 +2,34 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-var xmlHttp;
+//
+//$(document).ready(function() {
+//    $("#navItem").click(function() {
+//        $(this).siblings().removeClass("current-menu-item");
+//        $(this).addClass("current-menu-item");
+//        alert(this);
+//        //feedClicked(this.innerHTML);
+//    }
+//    )
+//}
+//)
 
-function feedClicked(name) {
+
+
+var xmlHttp;
+function feedClicked(name, selNode) {
+
+    var nodes = selNode.parentNode.childNodes;
+    for (var i = 0; i < nodes.length; i++) {
+        if (nodes[i].nodeName === 'LI') {
+            if (nodes[i] === selNode) {
+                nodes[i].className = "current-menu-item";
+            } else {
+                nodes[i].className = "menu-item";
+            }
+        }
+    }
+
     if (name.length == 0) {
         document.getElementById("feed").innerHTML = "";
         return;
