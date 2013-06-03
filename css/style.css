@@ -222,10 +222,11 @@ h6.header-line{
 /* MAIN ------------------------------------------------------------*/
 
 #main{
+    position:relative;
     margin-left: 296px;
-    margin-top: -653px;
+    padding-top: 10px;
     width: 655px;
-    float: left;
+    float: top;
 }
 
 /* HEADER ------------------------------------------------------------*/
