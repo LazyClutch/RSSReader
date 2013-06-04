@@ -32,7 +32,7 @@
             <!-- SIDEBAR -->
             <div id="sidebar">
                 <!-- logo -->
-                <a href="index.php"><img src="img/RSS_001.png" onmouseover="mouseOver()" onmouseout="mouseOut()" width="210" height="210" alt="Left template" id="logo" /></a>
+                <a id="title" href="index.php"><img src="img/RSS_001.png" onmouseover="mouseOver()" onmouseout="mouseOut()" width="210" height="210" alt="Left template" id="logo" /></a>
 
                 <!-- search -->
                 <div>
@@ -72,8 +72,15 @@
 
             <!-- MAIN -->
             <div id="main">
+                <!--FEED-->
                 <div id="feed">
                 </div>
+                <!--ENDS FEED-->
+                <!--TOP-->
+                <div id="top">
+                    <a href="#title"><img src="img/top.png" id="topImg" /></a>
+                </div>
+                <!--ENDS TOP-->
             </div>
             <!-- ENDS MAIN -->
         </div>

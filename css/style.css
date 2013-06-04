@@ -52,7 +52,7 @@ h6.header-line{
 
 #wrapper{
     overflow: hidden;
-    width: 965px;
+    width: 1365px;
     min-height: 100%;
     padding-bottom: 15px;
 }
@@ -202,17 +202,26 @@ h6.header-line{
 
 #main{
     position:relative;
-    margin-left: 300px;
+    margin-left: 330px;
     padding-top: 10px;
-    width: 650px;
+    width: 1050px;
     float: top;
 }
 
 /* HEADER ------------------------------------------------------------*/
 
+#feed{
+    width: 850px;
+}
+
+#feed #item{
+    width:850px;
+}
+
 #main #feed #item #itemLink{
     margin-left: 20px;
-    font-size: 16px;
+    font-size: 18px;
+    color: #FF0000;
 }
 
 #main #feed #item #savePic{
@@ -223,8 +232,15 @@ h6.header-line{
 #main #feed #item #itemTime{
     margin-left: 41px;
     font-size:12px;
+    color: #a5a3a0;
 }
 
+/* TOP ---------------------------------------------------------------*/
+#top{
+    position:fixed;
+    top:650px;
+    left:1350px;
+}
 
 /* FOOTER ------------------------------------------------------------*/
 
