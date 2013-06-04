@@ -6,17 +6,18 @@ var xmlHttp;
 var tipNode;
 
 function saveItem(node) {
-    var ns=node.parentNode.childNodes;
+    var nodePa = node.parentNode;
+    var ns = node.parentNode.childNodes;
     var innerHTML = "";
-    var href,description,title;
-    
+    var href, description, title;
+    if (nodePa.nodeName === 'LI') {
+        innerHTML += nodePa.innerHTML;
+    }
     for (i = 0; i < ns.length; i++) {
-        if (ns[i].nodeName === 'DIV') {
-            innerHTML += ns[i].innerHTML;
-        } else if(ns[i].nodeName === 'A'){
+        if (ns[i].nodeName === 'A') {
             href = ns[i].href;
             title = ns[i].innerHTML;
-        } else if(ns[i].nodeName === 'SPAN'){
+        } else if (ns[i].nodeName === 'SPAN') {
             tipNode = ns[i];
         }
     }
@@ -40,30 +41,31 @@ function saveItem(node) {
     link += Math.random();
     xmlHttp.onreadystatechange = saveChanged;
     xmlHttp.open("POST", url, true);
-    xmlHttp.setRequestHeader("Content-Type","application/x-www-form-urlencoded"); 
+    xmlHttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xmlHttp.send(link);
 }
 
 function EncodeUtf8(s1)
 {
-      var s = escape(s1);
-      var sa = s.split("%");
-      var retV ="";
-      if(sa[0] != "")
-      {
-         retV = sa[0];
-      }
-      for(var i = 1; i < sa.length; i ++)
-      {
-           if(sa[i].substring(0,1) == "u")
-           {
-               retV += Hex2Utf8(Str2Hex(sa[i].substring(1,5)));
-              
-           }
-           else retV += "%" + sa[i];
-      }
-     
-      return retV;
+    var s = escape(s1);
+    var sa = s.split("%");
+    var retV = "";
+    if (sa[0] != "")
+    {
+        retV = sa[0];
+    }
+    for (var i = 1; i < sa.length; i++)
+    {
+        if (sa[i].substring(0, 1) == "u")
+        {
+            retV += Hex2Utf8(Str2Hex(sa[i].substring(1, 5)));
+
+        }
+        else
+            retV += "%" + sa[i];
+    }
+
+    return retV;
 }
 
 function saveChanged() {
