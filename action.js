@@ -3,14 +3,7 @@
  * and open the template in the editor.
  */
 
-$(window).bind('resize',function() {
-    var mbox=$('body,html').css({'overflow':'hidden'}).find('.itembox').css({'width':parseInt($(window).width()-260)+'px'});
-    if($('#anymore_mid').length>0){
-        mbox.css({'height':poH.view_height()-parseInt($('#sitefoot').outerHeight(true))+'px'});
-    }else{
-        mbox.css({'height':poH.view_height()+'px'}).find('#pagebox').css({'height':($('#pagerbox').length>0)?poH.view_height()-parseInt($('#pagerbox').outerHeight(true))+'px':'inherit'});
-    }
-});
+
 
 function mouseOver() {
     var id = Math.ceil(Math.random() * 4);
