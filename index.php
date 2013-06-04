@@ -90,18 +90,11 @@
         <div id="footer">
             <!-- FOOTER-WRAPPER -->
             <div id="footer-wrapper">
-                <!-- footer-cols -->
-                <ul id="footer-cols">
-                    <li class="col clear-col">
-                        <h6>About the theme</h6>
-                    </li>
-                    <!-- ENDS Flickr -->
-                </ul>
                 <!-- ENDS footer-cols -->
                 <!-- footer-bottom -->
                 <div id="footer-bottom">
                     <div id="bottom-left">
-                        &copy; 2011 Ansimuz. All Rights Reserved.  <a href="http://themeforest.net/user/Ansimuz?ref=ansimuz">View portfolio</a>
+                        &copy; 2013 Lazy. All Rights Reserved.  <a href="http://github.com/liil444">Lazy</a>
                     </div>
                     <div id="bottom-right">To top</div>
                 </div>

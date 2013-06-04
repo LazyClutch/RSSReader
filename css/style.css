@@ -230,9 +230,13 @@ h6.header-line{
 }
 
 #main #feed #item #itemTime{
-    margin-left: 41px;
+    margin-left: 36px;
     font-size:12px;
     color: #a5a3a0;
+}
+
+#main #feed #item #description{
+    margin-left: 36px;
 }
 
 /* TOP ---------------------------------------------------------------*/
