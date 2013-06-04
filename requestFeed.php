@@ -8,7 +8,6 @@
 include 'lastRSS.php';
 include 'encodeDetect.php';
 
-
 function requestFeed($address) {
     $rss = new lastRSS();
 
@@ -22,7 +21,7 @@ function requestFeed($address) {
 // Try to load and parse RSS file 
     if ($rs = $rss->Get($address)) {
         foreach ($rs['items'] as $item) {
-    $result = $result . "\t<li id=\"item\"><a id=\"itemLink\" href=\"$item[link]\">" . $item['title'] . "</a><img src=\"img/save.png\" align=\"middle\" width=\"20\" height=\"20\" id=\"savePic\" onclick=\"saveItem(this)\"  /><span id=\"saveTip\"></span><br /><a id=\"itemTime\">".$item['pubDate']."</a><br /><div id=\"description\">" . $item['description'] . "</div></li><br />\n";
+            $result = $result . "\t<li id=\"item\"><div><a id=\"itemLink\" href=\"$item[link]\">" . $item['title'] . "</a><img src=\"img/146.png\" align=\"middle\" width=\"30\" height=\"30\" id=\"savePic\" onclick=\"saveItem(this)\"  /><span id=\"saveTip\"></span><br /><a id=\"itemTime\">" . $item['pubDate'] . "</a></div><br /><div id=\"description\">" . $item['description'] . "</div></li><br />\n";
             $result = $result . "<hr />\n";
         }
         $result = $result . "</ul>\n";
@@ -30,7 +29,7 @@ function requestFeed($address) {
         $result = $result . "Error: It's not possible to reach RSS file...\n";
     }
     $term = "UTF-8";
-    $result = encodeDetect($result,$term);
+    $result = encodeDetect($result, $term);
     $result = html_entity_decode($result, ENT_QUOTES, "UTF-8");
     return $result;
 }

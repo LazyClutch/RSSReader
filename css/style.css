@@ -238,13 +238,14 @@ h6.header-line{
 
 #main #feed #item #savePic{
     margin-top: 3px;
-    margin-left:130px;
+    vertical-align: middle;
 }
 
 #main #feed #item #itemTime{
     margin-left: 41px;
     font-size:12px;
 }
+
 
 #header{
     height: 105px;
