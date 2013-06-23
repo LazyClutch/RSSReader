@@ -10,10 +10,13 @@
 
         <!-- THEME -->
         <link rel="stylesheet" href="skins/paper-brown/style.css" type="text/css" media="screen" />
+        
+        <!--LIGHTBOX -->
+        <link rel="stylesheet" href="css/lightbox.css" type="text/css" media="screen" />
 
         <!-- JS -->
-        <script type="text/javascript" src="js/jquery-1.5.1.min.js"></script>
-        <script type="text/javascript" src="js/jqueryui.js"></script>
+        <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui-1.8.18.custom.min.js"></script>
         <script type="text/javascript" src="js/jquery.scrollTo-1.4.2-min.js"></script>
         <script type="text/javascript" src="js/quicksand.js"></script>
         <script type="text/javascript" src="js/custom.js"></script>
@@ -23,6 +26,7 @@
         <script type="text/javascript" src="saveItem.js"></script>
         <script type="text/javascript" src="getFav.js"></script>
         <script type="text/javascript" src="action.js"></script>
+        
 
     </head>
     <body>
