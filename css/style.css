@@ -1,24 +1,3 @@
-/*
-        Version 1.2
-*/
-
-/* IMPORTS ------------------------------------------------------------*/
-
-@import url('reset.css');
-
-@import url('typography.css');
-
-
-/* HACKS ------------------------------------------------------------*/
-
-.clear{
-    clear:both;
-    height:1px;
-}
-
-.inv{ display:none; }
-
-
 /* GENERAL ------------------------------------------------------------*/
 
 html,
@@ -57,30 +36,6 @@ h6.header-line{
     padding-bottom: 15px;
 }
 
-/* COLUMNS LAYOUT----------------------------------------------------------*/
-
-.one-half,
-.one-third,
-.two-third,
-.three-fourth,
-.one-fourth {
-    float:left;
-    margin-right:30px;
-    position:relative;
-}
-
-.one-half{
-    width: 280px;
-}
-
-.one-third{width: 177px;}
-
-.two-third{width: 384px;}
-
-.last {
-    clear:right;
-    margin-right:0 !important;
-}
 
 /* SIDEBAR ------------------------------------------------------------*/
 
@@ -259,40 +214,6 @@ h6.header-line{
     width: 950px;
 }
 
-/* FOOTER - COLS ------------------------------------------------------------*/
-
-#footer-cols{
-    display: block;
-    overflow: hidden;
-    margin-left: 15px;
-    margin-bottom: 25px;
-}
-
-#footer-cols li.col{
-    display: block;
-    width: 280px;
-    float: left;
-    margin-right: 30px;
-    margin-bottom: 30px;
-}
-
-#footer-cols li.clear-col{ clear:left; }
-
-#footer-cols li.col ul{
-    display: block;
-}
-
-#footer-cols li.col ul li{
-    display: block;
-    line-height: 35px;
-    border-top: 1px solid #343434;
-    border-bottom: 1px solid #000;
-}
-
-#footer-cols li.col ul li:first-child{ border-top: none; }
-
-#footer-cols li.col ul li:last-child{ border-bottom: none; }	
-
 /* FOOTER-BOTTOM ------------------------------------------------------------*/
 
 #footer-bottom{ 
@@ -310,6 +231,149 @@ h6.header-line{
     background: url(../img/to-top-arrow.png) no-repeat right 5px ;
     padding-right: 20px;
     cursor: pointer;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* GENERAL ------------------------------------------------------------*/
+
+body {
+	line-height: 1em;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size:  100%;
+}
+
+#wrapper{
+	font-size: 14px;
+	line-height: 1.5em;
+}
+
+#wrapper p{ margin-bottom: 21px; }
+
+a.link-button{
+	text-decoration: none;
+	color: #606060;
+}
+
+a.link-button:hover{ color: #999; }
+
+a{
+	text-decoration: none;
+	color: #9a0202;
+}
+
+a:hover{ color: #631313; }	
+
+
+/* SIDEBAR ELEMENTS ------------------------------------------------------------*/
+
+#sidebar,
+#sidebar a{}
+
+#sidebar h6{
+	font-family: Tahoma, arial;
+	font-weight: normal;
+	font-size: 16px;
+	margin-bottom: 20px;
+}
+
+#sidebar #searchform #s{ color: #a5a3a0;}
+
+#sidebar #searchform #feedName{ color: #a5a3a0;}
+
+#sidebar #searchform #feedTip{ color: #a5a3a0;}
+
+
+	
+#sidebar #nav>li{ font-size: 14px; }
+	
+#sidebar #nav>li a{ text-decoration: none; }
+	
+#sidebar #nav>li>ul li a{ text-decoration: none; }
+
+#sidebar #nav>li>ul li{ font-size: 12px; }
+
+#sidebar #searchform #s{ font-size: 12px; }
+
+#sidebar #searchform #feedName{ font-size: 12px; }
+
+#sidebar #searchform #feedTip{ font-size: 20px; }
+
+#sidebar #nav #navLi #navItem{ color: #a5a3a0;}
+
+.cat-list{ color: #a5a3a0;}
+
+
+/* FOOTER------------------------------------------------------------*/
+
+#footer a{ text-decoration: none; }
+
+#footer h6{
+	font-family: Tahoma, arial;
+	font-weight: normal;
+	font-size: 18px;
+	margin-bottom: 20px;
+}
+
+#footer-cols li,
+#footer-cols li a{
+	font-size: 14px;
+	line-height: 1.5em;
+	text-decoration: none;
+}
+
+#footer-bottom{
+	font-size: 12px;
+	line-height: 1.5em;
 }
 
 
