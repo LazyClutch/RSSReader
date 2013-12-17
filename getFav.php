@@ -1,10 +1,7 @@
 <?php
 
 include 'encodeDetect.php';
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 $title = "";
 $description = "";
 $href = "";
@@ -25,5 +22,4 @@ while ($row = mysql_fetch_array($feedlist)) {
 }
 echo $result;
 
-//end function
 ?>

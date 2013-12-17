@@ -1,24 +1,15 @@
 <?php
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 include 'lastRSS.php';
 include 'encodeDetect.php';
 
 function requestFeed($address) {
     $rss = new lastRSS();
 
-// Set cache dir and cache time limit (1200 seconds) 
-// (don't forget to chmod cahce dir to 777 to allow writing) 
     $rss->cache_dir = './temp';
     $rss->cache_time = 1200;
 
     $result = "";
-
-// Try to load and parse RSS file 
     if ($rs = $rss->Get($address)) {
         foreach ($rs['items'] as $item) {
             $result = $result . "\t<li id=\"item\"><a id=\"itemLink\" href=\"$item[link]\">" . $item['title'] . "</a><img src=\"img/146.png\" align=\"middle\" width=\"30\" height=\"30\" id=\"savePic\" onclick=\"saveItem(this)\"  /><span id=\"saveTip\"></span><br /><p id=\"itemTime\">" . $item['pubDate'] . "</p></div><br /><div id=\"description\"><div>" . $item['description'] . "</div></li><br />\n";

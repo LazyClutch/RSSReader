@@ -1,4 +1,3 @@
-/* GENERAL ------------------------------------------------------------*/
 
 html,
 body{ height: 100%; }
@@ -27,7 +26,6 @@ h6.header-line{
     margin-left: 23px;
 }
 
-/* WRAPPER ------------------------------------------------------------*/
 
 #wrapper{
     overflow: hidden;
@@ -37,7 +35,6 @@ h6.header-line{
 }
 
 
-/* SIDEBAR ------------------------------------------------------------*/
 
 #sidebar{
     width: 285px;
@@ -51,7 +48,6 @@ h6.header-line{
     margin: 21px 0px 21px 15px;
 }
 
-/* SEARCH FORM ------------------------------------------------------------*/
 
 #sidebar #searchform{
     display: block;
@@ -104,7 +100,6 @@ h6.header-line{
     background-position: 0px -26px;
 }
 
-/* NAVIGATION ------------------------------------------------------------*/
 
 #sidebar #nav{
     display: block;
@@ -134,7 +129,6 @@ h6.header-line{
     padding-top: 8px;
 }
 
-/* SIDEBAR - CATEGORIES ---------------------------------------------------*/
 
 #sidebar .favorite{
     display: block;
@@ -153,7 +147,6 @@ h6.header-line{
     margin-left: 57px;
 }
 
-/* MAIN ------------------------------------------------------------*/
 
 #main{
     position:relative;
@@ -163,7 +156,6 @@ h6.header-line{
     float: top;
 }
 
-/* HEADER ------------------------------------------------------------*/
 
 #feed{
     width: 850px;
@@ -194,14 +186,12 @@ h6.header-line{
     margin-left: 36px;
 }
 
-/* TOP ---------------------------------------------------------------*/
 #top{
     position:fixed;
     top:650px;
     left:1350px;
 }
 
-/* FOOTER ------------------------------------------------------------*/
 
 #footer{
     width: 100%;
@@ -214,7 +204,6 @@ h6.header-line{
     width: 950px;
 }
 
-/* FOOTER-BOTTOM ------------------------------------------------------------*/
 
 #footer-bottom{ 
     margin-left: 15px;
@@ -265,12 +254,10 @@ q:before, q:after {
 	content: none;
 }
 
-/* remember to define focus styles! */
 :focus {
 	outline: 0;
 }
 
-/* remember to highlight inserts somehow! */
 ins {
 	text-decoration: none;
 }
@@ -278,13 +265,11 @@ del {
 	text-decoration: line-through;
 }
 
-/* tables still need 'cellspacing="0"' in the markup */
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
 
-/* GENERAL ------------------------------------------------------------*/
 
 body {
 	line-height: 1em;
@@ -314,7 +299,6 @@ a{
 a:hover{ color: #631313; }	
 
 
-/* SIDEBAR ELEMENTS ------------------------------------------------------------*/
 
 #sidebar,
 #sidebar a{}
@@ -353,7 +337,6 @@ a:hover{ color: #631313; }
 .cat-list{ color: #a5a3a0;}
 
 
-/* FOOTER------------------------------------------------------------*/
 
 #footer a{ text-decoration: none; }
 

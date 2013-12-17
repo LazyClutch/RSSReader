@@ -20,6 +20,7 @@ function addFeed() {
         alert("Your browser doesn't support AJAX!");
         return;
     }
+    document.getElementById("feedTip").innerHTML = "正在解析。。。";
     addr = EncodeUtf8(addr);
     var link = "addFeed.php";
     link += "?link=";

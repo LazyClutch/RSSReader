@@ -6,6 +6,7 @@
 var xmlHttp;
 function feedClicked(name, selNode) {
     document.getElementById("feed").innerHTML = "Loading...";
+    //document.getElementById("feedTip").innetHTML = "";
     var nodes = selNode.parentNode.childNodes;
     for (var i = 0; i < nodes.length; i++) {
         if (nodes[i].nodeName === 'LI') {

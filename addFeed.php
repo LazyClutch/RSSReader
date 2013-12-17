@@ -1,10 +1,6 @@
 <?php
 
 include 'requestFeed.php';
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 $addr = $_GET["link"];
 $title = $_GET["name"];
 $addr = iconv("UTF-8", "ASCII", $addr);

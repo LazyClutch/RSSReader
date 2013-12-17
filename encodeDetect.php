@@ -1,10 +1,5 @@
 <?php
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 function encodeDetect($keytitle,$terminal) {
     $encode = mb_detect_encoding($keytitle, array('ASCII', 'EUC-CN','GB2312', 'GBK', 'UTF-8'));
     $keytitle = iconv($encode, $terminal, $keytitle);
